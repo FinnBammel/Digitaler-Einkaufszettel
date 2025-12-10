@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/profile">
+
+    <fragment
+        android:id="@+id/profile"
+        android:name="com.example.ProfileFragment"
+        android:label="Profile">
+
+        <!-- Action to navigate from Profile to Friends List. -->
+        <action
+            android:id="@+id/action_profile_to_friendslist"
+            app:destination="@id/friendslist" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/friendslist"
+        android:name="com.example.FriendsListFragment"
+        android:label="Friends List" />
+
+    <!-- Add other fragment destinations similarly. -->
+</navigation>
