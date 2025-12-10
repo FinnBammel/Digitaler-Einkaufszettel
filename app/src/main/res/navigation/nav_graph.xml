@@ -3,23 +3,31 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/profile">
+    app:startDestination="@id/mainfragment">
 
     <fragment
-        android:id="@+id/profile"
-        android:name="com.example.ProfileFragment"
-        android:label="Profile">
+        android:id="@+id/ShoppingList"
+        android:name="com.example.mytestviewapp.ShoppinglistFragment"
+        android:label="Profile"/>
 
-        <!-- Action to navigate from Profile to Friends List. -->
-        <action
-            android:id="@+id/action_profile_to_friendslist"
-            app:destination="@id/friendslist" />
-    </fragment>
 
     <fragment
-        android:id="@+id/friendslist"
-        android:name="com.example.FriendsListFragment"
+        android:id="@+id/CookingIdeas"
+        android:name="com.example.mytestviewapp.Cookingideasfragment"
         android:label="Friends List" />
 
-    <!-- Add other fragment destinations similarly. -->
+    <fragment
+        android:id="@+id/mainfragment"
+        android:name="com.example.mytestviewapp.MainFregment"
+        android:label="Friends List">
+    <action
+        android:id="@+id/action_to_cookingIdeas"
+        app:destination="@id/CookingIdeas" />
+
+    <action
+        android:id="@+id/action_to_shoppingList"
+        app:destination="@id/ShoppingList" />
+
+    </fragment>
+
 </navigation>

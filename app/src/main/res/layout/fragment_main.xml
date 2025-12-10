@@ -1,6 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button_Shoppinglist"
+        android:layout_width="329dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="120dp"
+        android:backgroundTint="@color/black"
+        android:text="EINKAUFSZETTEL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bottomAppBar" />
+
+    <Button
+        android:id="@+id/button_CookingIdeas"
+        android:layout_width="329dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="200dp"
+        android:backgroundTint="@color/black"
+        android:bufferType="normal"
+        android:text="KOCH IDEEN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_Shoppinglist" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="409dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="88dp"
+        android:background="@android:color/black"
+        android:backgroundTint="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/button_Shoppinglist"
+        android:layout_marginBottom="90dp" />
+
+    <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="425dp"
+        android:layout_height="88dp"
+        android:layout_gravity="top"
+        android:layout_marginBottom="-85dp"
+        android:backgroundTint="@android:color/background_dark"
+        app:layout_constraintBottom_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="392dp"
+        android:layout_height="66dp"
+        android:text="EINKAUFSPLANER"
+        android:textColor="@color/white"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="30dp"/>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
