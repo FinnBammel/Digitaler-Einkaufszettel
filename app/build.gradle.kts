@@ -57,4 +57,7 @@ dependencies {
     // Views/Fragments integration
     implementation("androidx.navigation:navigation-fragment:${nav_version}")
     implementation("androidx.navigation:navigation-ui:${nav_version}")
+
+    implementation("androidx.recyclerview:recyclerview:1.4.0")
+    implementation("androidx.cardview:cardview:1.0.0")
 }

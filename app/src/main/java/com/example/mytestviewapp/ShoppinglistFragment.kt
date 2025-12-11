@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.mytestviewapp.databinding.FragmentShoppinglistBinding
 
     class ShoppinglistFragment: Fragment() {
@@ -14,14 +15,16 @@ import com.example.mytestviewapp.databinding.FragmentShoppinglistBinding
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?): View {
-            binding = FragmentShoppinglistBinding.inflate(layoutInflater)
+            binding = FragmentShoppinglistBinding.inflate(layoutInflater, container, false)
             return binding.root
         }
 
         override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
             super.onViewCreated(view, savedInstanceState)
 
+            binding.buttonBackShoppingList.setOnClickListener{
+                findNavController().popBackStack()
+            }
 
-            //binding.button.setOnClickListener{.navigate(R.id.acitvity_main_to_fragment_shoppinglist)}
         }
-    }
+        }
