@@ -53,13 +53,14 @@
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/entry_cooking_ideas"
-        android:layout_width="270dp"
+        android:layout_width="215dp"
         android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="52dp"
         android:hint="Ideen eingeben"
-        app:layout_constraintTop_toBottomOf="@id/TopBar_CookingIdeas"
-        android:layout_marginTop="55dp"
         app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintTop_toBottomOf="@id/TopBar_CookingIdeas" />
+
     <Button
         android:id="@+id/buttonDelete"
         android:layout_width="wrap_content"
@@ -73,8 +74,8 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/List_cooking"
-        android:layout_width="409dp"
-        android:layout_height="400dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/entry_cooking_ideas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
